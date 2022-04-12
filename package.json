@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\" ",
     "start": "",
     "server": "",
-    "build": "",
+    "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": ""
   },
@@ -15,7 +15,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
